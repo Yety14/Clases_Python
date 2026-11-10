@@ -1,0 +1,535 @@
+# EXAMEN DE PROGRAMACIÓN - TEMAS 0, 1 Y 2
+## SECCIÓN: "¿Qué imprime esto?" (Predicting Output)
+
+**PREGUNTAS DE TEMAS 0 Y 1 (Variables, Tipos y Expresiones)**
+
+1.  
+   x = 5
+   print(f"El valor es: {x}")
+
+   ¿Qué se imprime?
+   a) El valor es: 5
+   b) El valor es: x
+   c) Error de sintaxis
+
+   **Respuesta correcta: a**
+
+2.  
+   nombre = "Ana"
+   edad = 18
+   print(f"{nombre} tiene {edad} años")
+
+   ¿Qué se imprime?
+   a) Ana tiene 18 años
+   b) ana tiene 18 año
+   c) Error por tipo de dato
+
+   **Respuesta correcta: a**
+
+3.  
+   temperatura = 25.5
+   print(temperatura + 5)
+
+   ¿Qué se imprime?
+   a) 30
+   b) 30.5
+   c) Temperatura25.5 + 5
+
+   **Respuesta correcta: b**
+
+4.  
+   x = True
+   y = False
+   print(f"x es {x} y y es {y}")
+
+   ¿Qué se imprime?
+   a) x es True y y es False
+   b) x es verdadero y y es falso
+   c) Error de tipo booleano
+
+   **Respuesta correcta: a**
+
+5.  
+   texto = "Hola"
+   print(texto * 3)
+
+   ¿Qué se imprime?
+   a) HolaHolaHola
+   b) HolaHola
+   c) Error de multiplicación con cadenas
+
+   **Respuesta correcta: a**
+
+6.  
+   a = 10
+   b = 2
+   print(a / b)
+   print(a // b)
+
+   ¿Qué se imprime en orden?
+   a) 5.0 y 5
+   b) 5 y 5.0
+   c) Error de división por cero
+
+   **Respuesta correcta: a**
+
+7.  
+   precio = 19.99
+   descuento = 10
+   print(f"El precio final es {precio - descuento}")
+
+   ¿Qué se imprime (redondeando a 2 decimales)?
+   a) El precio final es 9.989999...
+   b) El precio final es 9.99
+
+   **Respuesta correcta: b** (El resultado es 9.99).
+
+8.  
+   x = "Python"
+   print(x[0] + x[-1])
+
+   ¿Qué se imprime?
+   a) Py
+   b) Pn
+   c) xn
+   d) Error
+
+   **Respuesta correcta: b**
+
+9.  
+   lista = [1, 2, 3, 4, 5]
+   print(lista[2] * lista[0])
+
+   ¿Qué se imprime?
+   a) 6
+   b) 2
+   c) 3
+   d) Error de índice
+
+   **Respuesta correcta: a**
+
+10.  
+    edad = 25
+    es_adulto = edad >= 18
+    print(es_adulto)
+
+    ¿Qué se imprime?
+    a) True
+    b) False
+    c) "es adult"
+    d) Error de comparación
+
+    **Respuesta correcta: a**
+
+---
+
+**PREGUNTAS DE TEMAS 0, 1 Y 2 (Condicionales y Bucle 'for')**
+
+11.  
+    x = 5
+    if x > 3:
+        print("Más que tres")
+    else:
+        print("Menos o igual a tres")
+
+    ¿Qué se imprime?
+    a) Más que tres
+    b) Menos o igual a tres
+    c) Nada (no imprime nada)
+    d) Error
+
+    **Respuesta correcta: a**
+
+12.  
+    nota = 7.0
+    if nota >= 5:
+        print("APROBADO")
+    elif nota == 9:
+        print("EXCELENTE")
+    else:
+        print("REPROBADO")
+
+    ¿Qué se imprime?
+    a) Aprobado
+    b) Excelente
+    c) Reprobado
+    d) Error de sintaxis (porque no hay 'else')
+
+    **Respuesta correcta: a**
+
+13.  
+    numero = 10
+    if numero % 2 == 0:
+        print("Número par")
+    elif numero % 2 != 0:
+        print("Número impar")
+    print("Fin del programa")
+
+    ¿Qué se imprime exactamente?
+    a) Número par
+    b) Número par\nFin del programa
+    c) Fin del programa\nNúmero par
+    d) Solo "Fin del programa"
+
+    **Respuesta correcta: b**
+
+14.  
+    fruta = "Manzana"
+    if fruta == "Manzana":
+        print("Es una Manzana")
+    elif fruta == "Pera":
+        print("Es una Pera")
+    print("Salida:", fruta)
+
+    ¿Qué se imprime?
+    a) Es una Manzana\nSalida: Manzana
+    b) Salida: Manzana\nEs una Manzana
+    c) Solo "Salida: Manzana"
+    d) Error de indentación
+
+    **Respuesta correcta: a**
+
+15.  
+    edad = 20
+    if edad >= 18 and edad <= 30:
+        print("Jóvenes adultos")
+    elif edad > 30:
+        print("Adultos mayores")
+    print("Bucle terminado")
+
+    ¿Qué se imprime?
+    a) Jóvenes adultos\nBucle terminado
+    b) Bucle terminado\nJóvenes adultos
+    c) Solo "Adultos mayores" (porque 20 > 30)
+    d) Error de condición AND
+
+    **Respuesta correcta: a**
+
+16.  
+    for i in range(5):
+        print(i, end=" ")
+
+    ¿Qué se imprime en una línea?
+    a) 0 1 2 3 4
+    b) 1 2 3 4 5
+    c) 0 1 2 3
+    d) Error de rango
+
+    **Respuesta correcta: a**
+
+17.  
+    lista = ["A", "B", "C"]
+    for item in lista:
+        print(item.upper(), end="")
+    print() # Salto de línea final
+
+    ¿Qué se imprime?
+    a) ABC\n (mayúsculas, con salto)
+    b) abc\n (minúsculas)
+    c) AB C\n (solo dos)
+    d) Error porque upper() no existe en strings
+
+    **Respuesta correcta: a**
+
+18.  
+    numero = 0
+    while numero < 5:
+        numero += 1
+        print(numero, end=" ")
+
+    ¿Qué se imprime?
+    a) 1 2 3 4 5
+    b) 0 1 2 3 4
+    c) Error porque while no tiene condicional
+    d) Solo "0 " (no entra al bucle)
+
+    **Respuesta correcta: a**
+
+19.  
+    for i in range(0, 10, 2):
+        print(i)
+
+    ¿Qué se imprime?
+    a) 0 2 4 6 8
+    b) 0 2 4 6 8 10
+    c) 2 4 6 8
+    d) Error porque step no puede ser mayor que stop
+
+    **Respuesta correcta: a**
+
+20.  
+    for i in range(1, -5, -1): # Inicio, fin, paso
+        print(i)
+
+    ¿Qué se imprime?
+    a) 1 0 -1 -2 -3 -4
+    b) 1 0 -1 -2 -3
+    c) Error porque el paso es negativo pero el inicio/fin es incorrecto
+    d) Solo "1"
+
+    **Respuesta correcta: a**
+
+21.  
+    x = 5
+    y = 10
+    print(x + y) # Suma básica
+
+    ¿Qué se imprime?
+    a) 15
+    b) Error porque x no está definido
+    c) Error porque no puede sumar dos variables directamente (necesita print)
+    d) El texto "x + y"
+
+    **Respuesta correcta: a**
+
+22.  
+    palabra = "hola"
+    print(len(palabra))
+
+    ¿Qué se imprime?
+    a) 4
+    b) 5
+    c) Error porque no existe la función len()
+    d) Error porque la cadena es muy corta
+
+    **Respuesta correcta: a**
+
+23.  
+    texto = "Python"
+    print(texto[1])
+
+    ¿Qué se imprime?
+    a) P
+    b) y
+    c) t
+    d) H (mayúscula porque Python tiene 0-5, pero 1 es la segunda letra)
+
+    **Respuesta correcta: b**
+
+24.  
+    lista = [1, 2, 3, 4, 5]
+    print(lista[-1])
+
+    ¿Qué se imprime?
+    a) 1
+    b) 5
+    c) Error porque el índice -1 no existe en listas
+    d) El último elemento vacío (si hubiera)
+
+    **Respuesta correcta: b**
+
+25.  
+    x = True
+    y = False
+    print(x and y) # Operación lógica AND
+
+    ¿Qué se imprime?
+    a) True
+    b) False
+    c) Error porque no puede hacer AND con booleanos
+    d) El texto "and"
+
+    **Respuesta correcta: b**
+
+---
+
+**PREGUNTAS DE TEMAS 0, 1 Y 2 (Evaluación de expresiones complejas)**
+
+26.  
+    x = 10
+    if x > 5 and x < 15:
+        print("Dentro del rango")
+    elif x >= 20:
+        print("Muy alto")
+    else:
+        print("Muy bajo")
+
+    ¿Qué se imprime?
+    a) Dentro del rango
+    b) Muy alto
+    c) Muy bajo
+    d) Error porque 'and' no está definido en Python
+
+    **Respuesta correcta: a**
+
+27.  
+    nombre = "Ana"
+    edad = 18
+    print(f"{nombre} tiene {edad} años.")
+
+    ¿Qué se imprime?
+    a) Ana tiene 18 años.
+    b) ana tiene 18 años.
+    c) Error porque la f-string no puede concatenar dos variables directamente
+    d) Solo "Ana"
+
+    **Respuesta correcta: a**
+
+28.  
+    lista = [1, 2, 3]
+    for i in lista:
+        if i == 2:
+            print("Encontré el 2")
+    print("Fin del bucle")
+
+    ¿Qué se imprime?
+    a) Encontré el 2\nFin del bucle
+    b) Fin del bucle\nEncontré el 2
+    c) Solo "Encontré el 2" (sin imprimir el fin)
+    d) Error porque 'if' no está dentro del bucle correctamente
+
+    **Respuesta correcta: a**
+
+29.  
+    x = "Hola"
+    y = "mundo"
+    print(x + " " + y) # Concatenación con espacio
+
+    ¿Qué se imprime?
+    a) Holamundo
+    b) Hola mundo
+    c) Error porque no puede unir cadenas con espacios sin comas
+    d) Solo "Hola"
+
+    **Respuesta correcta: b**
+
+30.  
+    x = 5.5
+    print(int(x)) # Conversión a entero
+
+    ¿Qué se imprime?
+    a) 5
+    b) 6
+    c) Error porque int() no puede convertir flotantes
+    d) El texto "5.5"
+
+    **Respuesta correcta: a**
+
+---
+
+**PREGUNTAS DE TEMAS 0, 1 Y 2 (Bucles 'for' con indexación)**
+
+31.  
+    lista = ["A", "B", "C"]
+    for i in range(len(lista)):
+        print(f"{i}: {lista[i]}")
+
+    ¿Qué se imprime?
+    a) 0: A\n1: B\n2: C
+    b) A\nB\nC
+    c) Error porque no se puede usar 'range' con listas directamente
+    d) Solo "A" (sin los demás elementos)
+
+    **Respuesta correcta: a**
+
+32.  
+    for i in range(3):
+        print(i + 10) # Suma a cada número del rango
+
+    ¿Qué se imprime?
+    a) 10 11 12
+    b) 3 4 5
+    c) 0 1 2
+    d) Error porque 'i' no está definido correctamente
+
+    **Respuesta correcta: a**
+
+33.  
+    x = "python"
+    print(x[0].upper()) # Primera letra en mayúscula
+
+    ¿Qué se imprime?
+    a) p
+    b) P
+    c) Python
+    d) Error porque no puede acceder a la primera letra con '0'
+
+    **Respuesta correcta: b**
+
+34.  
+    edad = 25
+    print(edad >= 18 and edad <= 30) # Verdad de condición compuesta
+
+    ¿Qué se imprime? (Si el resultado es verdadero, ¿qué valor devuelve?)
+    a) True
+    b) False
+    c) 25
+    d) Error porque no puede comparar con dos condiciones a la vez
+
+    **Respuesta correcta: a**
+
+35.  
+    for i in range(0, 5):
+        print(i * 2) # Multiplicación de cada número por 2
+
+    ¿Qué se imprime?
+    a) 0 2 4 6 8
+    b) 1 3 5 7 9
+    c) 2 4 6 8 10
+    d) Error porque el bucle no puede multiplicar directamente con un número fijo
+
+    **Respuesta correcta: a**
+
+---
+
+**PREGUNTAS DE TEMAS 0, 1 Y 2 (Errores comunes)**
+
+36.  
+    x = "hola"
+    print(x * 2) # Multiplicación de string por entero
+
+    ¿Qué se imprime?
+    a) holahola
+    b) Error porque no se puede multiplicar strings por enteros
+    c) HolaHola (con mayúsculas)
+    d) Solo "hola" (no se repite)
+
+    **Respuesta correcta: a**
+
+37.  
+    lista = [1, 2, 3]
+    print(lista[0] + lista[3]) # Acceso a índice fuera de rango
+
+    ¿Qué se imprime?
+    a) 4
+    b) Error porque el índice 3 no existe en una lista de tamaño 3 (índices válidos: 0,1,2)
+    c) 3 (porque Python ignora errores de índices en bucles)
+    d) Solo "lista[0] + lista[3]" como texto
+
+    **Respuesta correcta: b** (Se produce un IndexError).
+
+38.  
+    x = True
+    print(x == True) # Comparación booleana directa
+
+    ¿Qué se imprime?
+    a) True
+    b) False
+    c) Error porque no se puede comparar booleanos con '='
+    d) El texto "True" en mayúsculas
+
+    **Respuesta correcta: a**
+
+39.  
+    x = 10
+    print(x // x) # División entera de un número por sí mismo
+
+    ¿Qué se imprime?
+    a) 1.0 (porque en Python la división siempre devuelve flotante, pero // es entero)
+    b) 1 (resultado entero exacto porque ambos son enteros)
+    c) Error porque no se puede dividir por cero (no lo es)
+    d) El texto "1"
+
+    **Respuesta correcta: b**
+
+40.  
+    for i in range(5):
+        print(i + i) # Suma de cada número consigo mismo en el bucle
+
+    ¿Qué se imprime?
+    a) 2 4 6 8 10
+    b) 0 2 4 6 8
+    c) 1 3 5 7 9
+    d) Error porque no hay operador '+' en bucles
+
+    **Respuesta correcta: b**
