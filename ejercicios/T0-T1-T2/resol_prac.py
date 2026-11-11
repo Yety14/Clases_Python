@@ -1,4 +1,5 @@
 
+MOSTRAR_SOLUCIONES = True
 # =====================================================================
 # ANEXO. SOLUCIONES FUNCIONALES
 # =====================================================================
@@ -127,96 +128,17 @@ def solucion_b6():
 
 def solucion_b7():
     opcion = int(input("1. Sumar  2. Restar  3. Multiplicar  4. Dividir: "))
-    a, b = 12, 4
     match opcion:
         case 1:
-            print(a + b)
+            print("Suma")
         case 2:
-            print(a - b)
+            print("Resta")
         case 3:
-            print(a * b)
+            print("Multiplicación")
         case 4:
-            print(a / b)
+            print("Division")
         case _:
             print("Opción no válida")
-
-
-def solucion_c1():
-    for dia in ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]:
-        print(dia)
-
-
-def solucion_c2():
-    numeros = [10, 20, 30]
-    for i in range(len(numeros)):
-        print(f"Posición {i} tiene valor {numeros[i]}")
-
-
-def solucion_c3():
-    for numero in range(0, 21, 2):
-        print(numero)
-
-
-def solucion_c4():
-    suma = 0
-    for numero in range(1, 101):
-        suma += numero
-    print("Suma total:", suma)
-
-
-def solucion_c5():
-    numero = int(input("¿Qué tabla quieres ver? "))
-    for i in range(1, 11):
-        print(f"{numero} x {i} = {numero * i}")
-
-
-def solucion_c6():
-    numero = int(input("Introduce un número entre 1 y 10: "))
-    while numero < 1 or numero > 10:
-        print("Valor incorrecto")
-        numero = int(input("Vuelve a introducirlo: "))
-    print("Número válido:", numero)
-
-
-def solucion_c7():
-    for numero in range(1, 11):
-        if numero == 7:
-            print("¡He encontrado el 7!")
-            break
-
-
-def solucion_c8():
-    for numero in range(10):
-        if numero == 3 or numero == 7:
-            continue
-        print(numero)
-
-
-def solucion_c9():
-    n = int(input("Introduce un entero no negativo: "))
-    if n < 0:
-        print("El número debe ser no negativo")
-    else:
-        factorial = 1
-        contador = 1
-        while contador <= n:
-            factorial *= contador
-            contador += 1
-        print(f"{n}! = {factorial}")
-
-
-def solucion_c10():
-    n = int(input("Introduce un entero: "))
-    if n < 2:
-        es_primo = False
-    else:
-        es_primo = True
-        divisor = 2
-        while divisor < n and es_primo:
-            if n % divisor == 0:
-                es_primo = False
-            divisor += 1
-    print("Es primo" if es_primo else "No es primo")
 
 
 def solucion_d1():
@@ -296,133 +218,14 @@ def solucion_d7():
         print("La entrada no contiene únicamente dígitos")
 
 
-def solucion_e1():
-    def contar_palabras(lista):
-        return len(lista)
-
-    def contar_caracteres(lista):
-        total = 0
-        for palabra in lista:
-            total += len(palabra)
-        return total
-
-    def palabra_mas_larga(lista):
-        return max(lista, key=len)
-
-    def palabras_mayusculas(lista):
-        return [palabra.upper() for palabra in lista]
-
-    def palabras_minusculas(lista):
-        return [palabra.lower() for palabra in lista]
-
-    def ordenar_palabras(lista):
-        return sorted(lista, key=str.lower)
-
-    palabras = ["Python", "es", "un", "lenguaje", "de", "programación"]
-    print("Número de palabras:", contar_palabras(palabras))
-    print("Número de caracteres:", contar_caracteres(palabras))
-    print("Palabra más larga:", palabra_mas_larga(palabras))
-    print("Mayúsculas:", palabras_mayusculas(palabras))
-    print("Minúsculas:", palabras_minusculas(palabras))
-    print("Ordenadas:", ordenar_palabras(palabras))
-
-
-def solucion_e2():
-    def area_cuadrado(lado):
-        return lado ** 2
-
-    def area_rectangulo(base, altura):
-        return base * altura
-
-    figura = input("¿Cuadrado o rectángulo? ").lower()
-    if figura == "cuadrado":
-        lado = float(input("Lado: "))
-        if lado > 0:
-            print("Área:", area_cuadrado(lado))
-        else:
-            print("El lado debe ser positivo")
-    elif figura in ("rectangulo", "rectángulo"):
-        base = float(input("Base: "))
-        altura = float(input("Altura: "))
-        if base > 0 and altura > 0:
-            print("Área:", area_rectangulo(base, altura))
-        else:
-            print("Las dimensiones deben ser positivas")
-    else:
-        print("Figura no válida")
-
-
-def solucion_e3():
-    def ordenar_tres(a, b, c):
-        if a > b:
-            a, b = b, a
-        if a > c:
-            a, c = c, a
-        if b > c:
-            b, c = c, b
-        return a, b, c
-
-    print(ordenar_tres(8, 2, 5))
-
-
-def solucion_e4():
-    def velocidad_kmh(distancia_km, tiempo_segundos):
-        return distancia_km / (tiempo_segundos / 3600)
-
-    def calcular_multa(velocidad):
-        if velocidad <= 100:
-            return 0
-        elif velocidad <= 130:
-            return 100
-        elif velocidad <= 150:
-            return 300
-        elif velocidad <= 160:
-            return 400
-        elif velocidad <= 170:
-            return 500
-        else:
-            return 600
-
-    tiempo = float(input("Tiempo empleado (segundos): "))
-    if tiempo <= 0:
-        print("El tiempo debe ser positivo")
-    else:
-        velocidad = velocidad_kmh(9.3, tiempo)
-        multa = calcular_multa(velocidad)
-        print(f"Velocidad media: {velocidad:.2f} km/h")
-        if multa == 0:
-            print("No corresponde sanción")
-        else:
-            print(f"Importe de la multa: {multa} euros")
-
-
-def solucion_e5():
-    import math
-    terminos = int(input("Número de términos: "))
-    if terminos <= 0:
-        print("Debe introducirse al menos un término")
-    else:
-        suma = 0
-        for i in range(terminos):
-            suma += (-1) ** i / (2 * i + 1)
-        aproximacion = 4 * suma
-        print(f"Aproximación: {aproximacion:.6f}")
-        print(f"Valor de math.pi: {math.pi:.6f}")
-
-
 SOLUCIONES = {
     "A.1": solucion_a1, "A.2": solucion_a2, "A.3": solucion_a3,
     "A.4": solucion_a4, "A.5": solucion_a5, "A.6": solucion_a6,
     "A.7": solucion_a7, "B.1": solucion_b1, "B.2": solucion_b2,
     "B.3": solucion_b3, "B.4": solucion_b4, "B.5": solucion_b5,
-    "B.6": solucion_b6, "B.7": solucion_b7, "C.1": solucion_c1,
-    "C.2": solucion_c2, "C.3": solucion_c3, "C.4": solucion_c4,
-    "C.5": solucion_c5, "C.6": solucion_c6, "C.7": solucion_c7,
-    "C.8": solucion_c8, "C.9": solucion_c9, "C.10": solucion_c10,
-    "D.1": solucion_d1, "D.2": solucion_d2, "D.3": solucion_d3,
-    "D.4": solucion_d4, "D.5": solucion_d5, "D.6": solucion_d6,
-    "D.7": solucion_d7, "E.1": solucion_e1, "E.2": solucion_e2,
-    "E.3": solucion_e3, "E.4": solucion_e4, "E.5": solucion_e5,
+    "B.6": solucion_b6, "B.7": solucion_b7, "D.1": solucion_d1,
+    "D.2": solucion_d2, "D.3": solucion_d3, "D.4": solucion_d4,
+    "D.5": solucion_d5, "D.6": solucion_d6, "D.7": solucion_d7
 }
 
 
