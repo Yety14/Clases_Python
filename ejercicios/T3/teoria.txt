@@ -1,0 +1,324 @@
+# ======================================================================
+# PREGUNTAS TEMA 3: INSTRUCCIONES DE CONTROL (if, match, while, for, excepciones)
+# ======================================================================
+
+1.
+    nota = 6
+    resultado = "Aprobado" if nota > 5 else "Suspenso"
+    print(resultado)
+
+    ¿Qué se imprime?
+    a) Error
+    b) Aprobado
+    c) True
+    d) Suspenso
+
+2.
+    nota = 5
+    resultado = "Aprobado" if nota > 5 else "Suspenso"
+    print(resultado)
+
+    ¿Qué se imprime?
+    a) Suspenso
+    b) Aprobado
+    c) Error
+    d) 5
+
+3.
+    x = 15
+    if x > 10:
+        print("A")
+    elif x > 5:
+        print("B")
+    else:
+        print("C")
+
+    ¿Qué se imprime?
+    a) B
+    b) A\nB
+    c) C
+    d) A
+
+4.
+    x = 15
+    if x > 10:
+        print("A")
+    if x > 5:
+        print("B")
+
+    ¿Qué se imprime?
+    a) B
+    b) A\nB
+    c) A
+    d) Nada
+
+5.
+    nota = 7.5
+    if 0 <= nota < 5:
+        print("Suspenso")
+    elif 5 <= nota < 7:
+        print("Aprobado")
+    elif 7 <= nota < 9:
+        print("Notable")
+    elif 9 <= nota <= 10:
+        print("Sobresaliente")
+    else:
+        print("Nota no válida")
+
+    ¿Qué se imprime?
+    a) Notable
+    b) Nota no válida
+    c) Sobresaliente
+    d) Aprobado
+
+6.
+    x = 7
+    if x > 0:
+        if x % 2 == 0:
+            print("A")
+        else:
+            print("B")
+    else:
+        print("C")
+
+    ¿Qué se imprime?
+    a) C
+    b) B
+    c) A
+    d) B\nC
+
+7.
+    a, b = (1, 2) if 3 > 2 else (2, 1)
+    print(a, b)
+
+    ¿Qué se imprime?
+    a) Error
+    b) 1 2
+    c) 1 2 3 4
+    d) 2 1
+
+8.
+    op = "+"
+    match op:
+        case "+":
+            print("suma")
+        case "-":
+            print("resta")
+        case _:
+            print("otro")
+
+    ¿Qué se imprime?
+    a) resta
+    b) suma
+    c) otro
+    d) Error
+
+9.
+    color = '#AF549B'
+    match color:
+        case '#FF0000':
+            print('rojo')
+        case '#00FF00':
+            print('verde')
+        case _:
+            print('Unknown color!')
+
+    ¿Qué se imprime?
+    a) #AF549B
+    b) Nada
+    c) Error
+    d) Unknown color!
+
+10.
+    a = 0
+    if a != 0 and 1 / a > 1:
+        print("nunca")
+    else:
+        print("seguro")
+
+    ¿Qué se imprime?
+    a) False
+    b) Error: ZeroDivisionError
+    c) seguro
+    d) Nada
+
+11.
+    a = 0
+    if a == 0 or 1 / a > 1:
+        print("ok")
+
+    ¿Qué se imprime?
+    a) ok
+    b) Error: ZeroDivisionError
+    c) Nada
+    d) False
+
+12.
+    a = 0
+    if 1 / a > 1 and a != 0:
+        print("nunca")
+    else:
+        print("seguro")
+
+    ¿Qué ocurre al ejecutar este código?
+    a) Error: ZeroDivisionError (al evaluar 1/a antes de comprobar a)
+    b) No se imprime nada
+    c) Se imprime "seguro"
+    d) Se imprime False
+
+13.
+    i = 0
+    while i < 3:
+        print(i, end=" ")
+        i += 1
+
+    ¿Qué se imprime?
+    a) 0 1 2 3
+    b) 0 1 2
+    c) Bucle infinito
+    d) 1 2 3
+
+14.
+    i = 5
+    while i < 3:
+        print(i)
+    print("fin")
+
+    ¿Qué se imprime?
+    a) Nada
+    b) 5
+    c) Error
+    d) fin
+
+15.
+    i = 0
+    while i < 10:
+        print(i)
+
+    ¿Qué ocurre al ejecutar este código?
+    a) Bucle infinito: imprime 0 indefinidamente
+    b) Imprime del 1 al 10
+    c) Error de sintaxis
+    d) Imprime del 0 al 9
+
+16.
+    n = 62574
+    a = n
+    digitos = 0
+    while a != 0:
+        digitos = digitos + 1
+        a = a // 10
+    print(digitos)
+
+    ¿Qué se imprime?
+    a) 5
+    b) 0
+    c) 4
+    d) 6
+
+17.
+    umbral = 10
+    termino = 1
+    cantidad = 2
+    while termino <= umbral:
+        print(termino, end=" ")
+        termino = termino + cantidad
+        cantidad = cantidad + 1
+
+    ¿Qué se imprime?
+    a) 1 3 6 10
+    b) 1 3 6 10 15
+    c) 3 6 10
+    d) 1 2 3 4
+
+18.
+    sumatorio = 0
+    i = 1
+    N = 4
+    while i <= N:
+        sumatorio += i
+        i += 1
+    print(sumatorio)
+
+    ¿Qué se imprime?
+    a) 4
+    b) 10
+    c) 6
+    d) 15
+
+19.
+    print(list(range(2, 10, 3)))
+
+    ¿Qué se imprime?
+    a) [2, 5, 8, 11]
+    b) [2, 5, 8]
+    c) [2, 3, 4]
+    d) [5, 8]
+
+20.
+    print(list(range(10, 1, -3)))
+
+    ¿Qué se imprime?
+    a) [10, 7, 4, 1]
+    b) [10, 7, 4]
+    c) []
+    d) [1, 4, 7, 10]
+
+21.
+    print(list(range(1, 10, -1)))
+
+    ¿Qué se imprime?
+    a) []
+    b) Error
+    c) [9, 8, 7]
+    d) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+22.
+    for i in range(1, 4):
+        for j in range(i):
+            print("*", end="")
+        print()
+
+    ¿Qué se imprime?
+    a) ***\n**\n*
+    b) *\n*\n*
+    c) *\n**\n***
+    d) ***\n***\n***
+
+23.
+    cont = 0
+    while cont < 3:
+        print(cont, end=" ")
+        cont += 1
+    else:
+        print("fin")
+
+    ¿Qué se imprime?
+    a) 0 1 2 fin
+    b) 0 1 2
+    c) fin
+    d) 0 1 2 3 fin
+
+24.
+    for i in range(5):
+        if i == 3:
+            break
+        print(i, end=" ")
+
+    ¿Qué se imprime?
+    a) 0 1 2 3 4
+    b) 3
+    c) 0 1 2 3
+    d) 0 1 2
+
+25.
+    for i in range(5):
+        if i == 2:
+            continue
+        print(i, end=" ")
+
+    ¿Qué se imprime?
+    a) 0 1 2 3 4
+    b) 0 1
+    c) 0 1 3 4
+    d) 3 4

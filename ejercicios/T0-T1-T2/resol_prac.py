@@ -100,8 +100,8 @@ def solucion_a7():
 
 
 # ---------------------------------------------------------------------
-# A.8 Ecuación de segundo grado (Boletín 1, Ej. 4)
-# Pide los coeficientes a, b y c de una ecuación ax^2 + bx + c = 0.
+# A.8 Ecuación de segundo grado
+# Pide los coeficientes a, b y c de una ecuación ax^2 + bx + c = 0, con a!=0.
 # Calcula el discriminante (d = b^2 - 4ac). Si d >= 0, calcula y muestra
 # las dos soluciones reales usando math.sqrt. Si d < 0, muestra que no
 # existen raíces reales.
@@ -124,7 +124,7 @@ def solucion_a8():
 
 
 # ---------------------------------------------------------------------
-# A.9 Canal trapezoidal de ingeniería civil (Boletín 1, Ej. 11)
+# A.9 Canal trapezoidal de ingeniería civil
 # Pide el ancho inferior (b), el ancho superior (B) y la altura (h) de 
 # un canal trapezoidal. Calcula y muestra con dos decimales:
 # - Área hidráulica: ((B + b) / 2) * h
@@ -142,7 +142,7 @@ def solucion_a9():
 
 
 # ---------------------------------------------------------------------
-# A.10 Salto de reloj (Boletín 2, Ej. 1)
+# A.10 Salto de reloj
 # Pide la hora actual de un reloj (horas, minutos y segundos) y una
 # cantidad de segundos adicionales 'x'. Calcula y muestra qué hora
 # marcará el reloj dentro de esos segundos en formato HH:MM:SS

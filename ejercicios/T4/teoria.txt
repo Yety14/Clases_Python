@@ -1,0 +1,346 @@
+# ======================================================================
+# PREGUNTAS TEMA 4: PROGRAMACIÓN MODULAR (funciones, módulos, ámbito, recursividad)
+# ======================================================================
+
+1.
+    def cuadrado(x):
+        return x**2
+    
+    print(cuadrado(3))
+
+    ¿Qué se imprime?
+    a) 6
+    b) 9
+    c) Error
+    d) 3
+
+2.
+    def cuadrado(x):
+        return x**2
+
+    ¿Qué se imprime al ejecutar este programa?
+    a) cuadrado
+    b) Nada
+    c) 4
+    d) Error
+
+3.
+    def cuadrado(x):
+        return x**2
+    
+    b = 1 + cuadrado(3)
+    print(cuadrado(b * 3))
+
+    ¿Qué se imprime?
+    a) 100
+    b) 30
+    c) 9
+    d) 900
+
+4.
+    def show(n):
+        print(n)
+    
+    print(show(5))
+
+    ¿Qué se imprime?
+    a) 5\nNone
+    b) 5
+    c) None
+    d) 5\n5
+
+5.
+    def ultima(n):
+        print(n % 10)
+    
+    a = ultima(123) + 1
+
+    ¿Qué ocurre al ejecutar este código?
+    a) a vale 3
+    b) a vale 4
+    c) Se imprime 3
+    d) TypeError: None + int no es posible
+
+6.
+    def f():
+        return 1, 2, 3
+    
+    a, b, c = f()
+    print(b)
+
+    ¿Qué se imprime?
+    a) 1
+    b) (1, 2, 3)
+    c) 2
+    d) 3
+
+7.
+    def f():
+        return 1, 2
+    
+    print(type(f()))
+
+    ¿Qué se imprime?
+    a) <class 'list'>
+    b) <class 'set'>
+    c) <class 'tuple'>
+    d) <class 'int'>
+
+8.
+    def calculo(precio, iva=21):
+        return precio + precio * iva / 100
+    
+    print(calculo(100))
+    print(calculo(100, 4))
+
+    ¿Qué se imprime?
+    a) Error
+    b) 121.0\n104.0
+    c) 100\n100
+    d) 121\n104
+
+9.
+    def resta(a, b):
+        return a - b
+    
+    print(resta(b=5, a=1))
+
+    ¿Qué se imprime?
+    a) -4
+    b) 5
+    c) Error
+    d) 4
+
+10.
+    def aplica(f, x):
+        return f(x)
+    
+    def doble(n):
+        return 2 * n
+    
+    print(aplica(doble, 4))
+
+    ¿Qué se imprime?
+    a) Error
+    b) 4
+    c) 8
+    d) 2
+
+11.
+    def f():
+        s = 5
+    
+    f()
+    print(s)
+
+    ¿Qué ocurre al ejecutar este código?
+    a) Se imprime 5
+    b) NameError: s no está definido fuera de la función
+    c) Se imprime None
+    d) Se imprime 0
+
+12.
+    a = 1
+    def inc(p):
+        p = p + 1
+        return p
+    
+    b = inc(a)
+    print(a, b)
+
+    ¿Qué se imprime?
+    a) 1 1
+    b) 2 1
+    c) 1 2
+    d) 2 2
+
+13.
+    a = 1
+    def inc():
+        global a
+        a = a + 1
+    
+    inc()
+    print(a)
+
+    ¿Qué se imprime?
+    a) Error
+    b) 1
+    c) 2
+    d) 0
+
+14.
+    x = 10
+    def f():
+        x = 5
+    
+    f()
+    print(x)
+
+    ¿Qué se imprime?
+    a) Error
+    b) None
+    c) 5
+    d) 10
+
+15.
+    def f():
+        try:
+            return "try"
+        finally:
+            print("finally", end=" ")
+    
+    print(f())
+
+    ¿Qué se imprime?
+    a) finally try
+    b) try
+    c) finally
+    d) try finally
+
+16.
+    def fact(n):
+        if n == 0 or n == 1:
+            return 1
+        elif n > 1:
+            return n * fact(n - 1)
+    
+    print(fact(5))
+
+    ¿Qué se imprime?
+    a) 120
+    b) Error
+    c) 24
+    d) 60
+
+17.
+    def fibonacci(n):
+        if n == 1 or n == 2:
+            return 1
+        elif n > 2:
+            return fibonacci(n - 1) + fibonacci(n - 2)
+    
+    print(fibonacci(6))
+
+    ¿Qué se imprime?
+    a) 13
+    b) 6
+    c) 8
+    d) 5
+
+18.
+    def mcd(m, n):
+        menor = min(m, n)
+        mayor = max(m, n)
+        resto = mayor % menor
+        if resto == 0:
+            return menor
+        else:
+            return mcd(menor, resto)
+    
+    print(mcd(12, 18))
+
+    ¿Qué se imprime?
+    a) 12
+    b) 36
+    c) 6
+    d) 18
+
+19.
+    def integral_x2(a, b, n):
+        deltax = (b - a) / n
+        sumatorio = 0.0
+        for i in range(n):
+            sumatorio += deltax * (a + i * deltax) ** 2
+        return sumatorio
+    
+    print(integral_x2(0, 2, 2))
+
+    ¿Qué se imprime?
+    a) 0.5
+    b) 2.0
+    c) 0.0
+    d) 1.0
+
+20.
+    def saluda(nombre, saludo="Hola"):
+        return saludo + " " + nombre
+    
+    print(saluda("Ana"))
+    print(saluda("Luis", "Adiós"))
+
+    ¿Qué se imprime?
+    a) Hola Ana\nAdiós Luis
+    b) Hola Ana\nHola Luis
+    c) Ana\nLuis
+    d) Error
+
+21.
+    def suma(n):
+        if n == 0:
+            return 0
+        return n + suma(n - 1)
+    
+    print(suma(4))
+
+    ¿Qué se imprime?
+    a) 0
+    b) 10
+    c) 24
+    d) 4
+
+22.
+    def divide(a, b):
+        return a // b, a % b
+    
+    q, r = divide(17, 5)
+    print(q, r)
+
+    ¿Qué se imprime?
+    a) 3.4 2
+    b) Error
+    c) 2 3
+    d) 3 2
+
+23.
+    x = 5
+    def f():
+        print(x)
+    
+    f()
+    x = 7
+    f()
+
+    ¿Qué se imprime?
+    a) 7\n7
+    b) 5\n7
+    c) 5\n5
+    d) Error
+
+24.
+    def externa():
+        def interna(n):
+            return n * 2
+        return interna(3) + 1
+    
+    print(externa())
+
+    ¿Qué se imprime?
+    a) 7
+    b) Error: interna no está definida
+    c) 6
+    d) 3
+
+25.
+    def pot(b, e):
+        if e == 0:
+            return 1
+        return b * pot(b, e - 1)
+    
+    print(pot(2, 5))
+
+    ¿Qué se imprime?
+    a) 25
+    b) 32
+    c) 16
+    d) 10

@@ -1,130 +1,51 @@
-1.  
-   x = 5
-   print(f"El valor es: {x}")
+# ======================================================================
+# PREGUNTAS TEMAS 0, 1 Y 2: PRESENTACIÓN, FUNDAMENTOS, LENGUAJES Y PYTHON BÁSICO
+# ======================================================================
 
-   ¿Qué se imprime?
-   a) El valor es: 5
-   b) El valor es: x
-   c) Error de sintaxis
+1.
+    a = 10
+    b = 2
+    print(a / b)
+    print(a // b)
 
-2.  
-   nombre = "Ana"
-   edad = 18
-   print(f"{nombre} tiene {edad} años")
+    ¿Qué se imprime en orden?
+    a) 5 y 5.0
+    b) Error de división por cero
+    c) 5.0 y 5.0
+    d) 5.0 y 5
 
-   ¿Qué se imprime?
-   a) Ana tiene 18 años
-   b) ana tiene 18 año
-   c) Error por tipo de dato
-
-3.  
-   temperatura = 25.5
-   print(temperatura + 5)
-
-   ¿Qué se imprime?
-   a) 30
-   b) 30.5
-   c) Temperatura25.5 + 5
-
-4.  
-   x = True
-   y = False
-   print(f"x es {x} y y es {y}")
-
-   ¿Qué se imprime?
-   a) x es True y y es False
-   b) x es verdadero y y es falso
-   c) Error de tipo booleano
-
-5.  
-   texto = "Hola"
-   print(texto * 3)
-
-   ¿Qué se imprime?
-   a) HolaHolaHola
-   b) HolaHola
-   c) Error de multiplicación con cadenas
-
-6.  
-   a = 10
-   b = 2
-   print(a / b)
-   print(a // b)
-
-   ¿Qué se imprime en orden?
-   a) 5.0 y 5
-   b) 5 y 5.0
-   c) Error de división por cero
-
-7.  
-   precio = 19.99
-   descuento = 10
-   print(f"El precio final es {precio - descuento}")
-
-   ¿Qué se imprime?
-   a) El precio final es 9.989999...
-   b) El precio final es 9.99
-
-8.  
-   x = "Python"
-   print(x[0] + x[-1])
-
-   ¿Qué se imprime?
-   a) Py
-   b) Pn
-   c) xn
-   d) Error
-
-9.  
-   lista = [1, 2, 3, 4, 5]
-   print(lista[2] * lista[0])
-
-   ¿Qué se imprime?
-   a) 6
-   b) 2
-   c) 3
-   d) Error de índice
-
-10.  
-    edad = 25
-    es_adulto = edad >= 18
-    print(es_adulto)
+2.
+    precio = 19.99
+    descuento = 10
+    print(f"El precio final es {precio - descuento:.2f}")
 
     ¿Qué se imprime?
-    a) True
-    b) False
-    c) "es adult"
-    d) Error de comparación
+    a) Error de formato
+    b) El precio final es 9.989999
+    c) El precio final es 9.99
+    d) El precio final es 10
 
-11.  
-    x = 5
-    if x > 3:
-        print("Más que tres")
-    else:
-        print("Menos o igual a tres")
+3.
+    x = "Python"
+    print(x[0] + x[-1])
 
     ¿Qué se imprime?
-    a) Más que tres
-    b) Menos o igual a tres
-    c) Nada
-    d) Error
+    a) Py
+    b) Pn
+    c) Error
+    d) xn
 
-12.  
-    nota = 7.0
-    if nota >= 5:
-        print("APROBADO")
-    elif nota == 9:
-        print("EXCELENTE")
-    else:
-        print("REPROBADO")
+4.
+    lista = [1, 2, 3, 4, 5]
+    print(lista[2] * lista[0])
 
     ¿Qué se imprime?
-    a) Aprobado
-    b) Excelente
-    c) Reprobado
-    d) Error de sintaxis
+    a) 6
+    b) Error de índice
+    c) 2
+    d) 3
 
-13.  
+5.
     numero = 10
     if numero % 2 == 0:
         print("Número par")
@@ -133,12 +54,22 @@
     print("Fin del programa")
 
     ¿Qué se imprime exactamente?
-    a) Número par
-    b) Número par\nFin del programa
+    a) Número par\nFin del programa
+    b) Número par
     c) Fin del programa\nNúmero par
     d) Solo "Fin del programa"
 
-15.  
+6.
+    x = 7
+    print(x % 3, x // 3, x ** 2)
+
+    ¿Qué se imprime?
+    a) 1 2 49
+    b) 2 1 49
+    c) 2.33 1 49
+    d) 1 2 14
+
+7.
     edad = 20
     if edad >= 18 and edad <= 30:
         print("Jóvenes adultos")
@@ -147,199 +78,77 @@
     print("Bucle terminado")
 
     ¿Qué se imprime?
-    a) Jóvenes adultos\nBucle terminado
-    b) Bucle terminado\nJóvenes adultos
-    c) Solo "Adultos mayores"
-    d) Error de condición AND
+    a) Bucle terminado\nJóvenes adultos
+    b) Error de condición AND
+    c) Jóvenes adultos\nBucle terminado
+    d) Solo "Adultos mayores"
 
-16.  
+8.
     for i in range(5):
         print(i, end=" ")
 
     ¿Qué se imprime en una línea?
     a) 0 1 2 3 4
-    b) 1 2 3 4 5
-    c) 0 1 2 3
-    d) Error de rango
+    b) Error de rango
+    c) 1 2 3 4 5
+    d) 0 1 2 3
 
-17.  
+9.
     lista = ["A", "B", "C"]
     for item in lista:
         print(item.upper(), end="")
-    print() # Salto de línea final
+    print()
 
     ¿Qué se imprime?
-    a) ABC\n (mayúsculas, con salto)
-    b) abc\n (minúsculas)
-    c) AB C\n (solo dos)
+    a) AB C
+    b) ABC
+    c) abc
     d) Error porque upper() no existe en strings
 
-18.  
+10.
     numero = 0
     while numero < 5:
         numero += 1
         print(numero, end=" ")
 
     ¿Qué se imprime?
-    a) 1 2 3 4 5
-    b) 0 1 2 3 4
-    c) Error porque while no tiene condicional
-    d) Solo "0 " (no entra al bucle)
+    a) Solo "0 "
+    b) Error porque while no tiene condicional
+    c) 1 2 3 4 5
+    d) 0 1 2 3 4
 
-
-19.  
+11.
     for i in range(0, 10, 2):
         print(i)
 
     ¿Qué se imprime?
-    a) 0 2 4 6 8
+    a) 2 4 6 8
     b) 0 2 4 6 8 10
-    c) 2 4 6 8
-    d) Error porque step no puede ser mayor que stop
+    c) Error porque step no puede ser mayor que stop
+    d) 0 2 4 6 8 (un número por línea)
 
-
-20.  
-    for i in range(1, -5, -1): # Inicio, fin, paso
+12.
+    for i in range(1, -5, -1):
         print(i)
 
     ¿Qué se imprime?
-    a) 1 0 -1 -2 -3 -4
-    b) 1 0 -1 -2 -3
-    c) Error porque el paso es negativo pero el inicio/fin es incorrecto
-    d) Solo "1"
+    a) Error porque el paso es negativo pero el inicio/fin es incorrecto
+    b) Solo "1"
+    c) 1 0 -1 -2 -3 -4 (un número por línea)
+    d) 1 0 -1 -2 -3
 
-
-21.  
-    x = 5
-    y = 10
-    print(x + y) # Suma básica
-
-    ¿Qué se imprime?
-    a) 15
-    b) Error porque x no está definido
-    c) Error porque no puede sumar dos variables directamente (necesita print)
-    d) El texto "x + y"
-
-
-22.  
-    palabra = "hola"
-    print(len(palabra))
-
-    ¿Qué se imprime?
-    a) 4
-    b) 5
-    c) Error porque no existe la función len()
-    d) Error porque la cadena es muy corta
-
-
-23.  
-    texto = "Python"
-    print(texto[1])
-
-    ¿Qué se imprime?
-    a) P
-    b) y
-    c) t
-    d) H (mayúscula porque Python tiene 0-5, pero 1 es la segunda letra)
-
-
-24.  
-    lista = [1, 2, 3, 4, 5]
-    print(lista[-1])
-
-    ¿Qué se imprime?
-    a) 1
-    b) 5
-    c) Error porque el índice -1 no existe en listas
-    d) El último elemento vacío (si hubiera)
-
-
-25.  
-    x = True
-    y = False
-    print(x and y) # Operación lógica AND
-
-    ¿Qué se imprime?
-    a) True
-    b) False
-    c) Error porque no puede hacer AND con booleanos
-    d) El texto "and"
-
-
----
-
-**PREGUNTAS DE TEMAS 0, 1 Y 2 (Evaluación de expresiones complejas)**
-
-26.  
-    x = 10
-    if x > 5 and x < 15:
-        print("Dentro del rango")
-    elif x >= 20:
-        print("Muy alto")
-    else:
-        print("Muy bajo")
-
-    ¿Qué se imprime?
-    a) Dentro del rango
-    b) Muy alto
-    c) Muy bajo
-    d) Error porque 'and' no está definido en Python
-
-
-27.  
-    nombre = "Ana"
-    edad = 18
-    print(f"{nombre} tiene {edad} años.")
-
-    ¿Qué se imprime?
-    a) Ana tiene 18 años.
-    b) ana tiene 18 años.
-    c) Error porque la f-string no puede concatenar dos variables directamente
-    d) Solo "Ana"
-
-
-28.  
-    lista = [1, 2, 3]
-    for i in lista:
-        if i == 2:
-            print("Encontré el 2")
-    print("Fin del bucle")
-
-    ¿Qué se imprime?
-    a) Encontré el 2\nFin del bucle
-    b) Fin del bucle\nEncontré el 2
-    c) "Encontré el 2"
-    d) Error porque 'if' no está dentro del bucle correctamente
-
-
-29.  
+13.
     x = "Hola"
     y = "mundo"
     print(x + " " + y)
 
     ¿Qué se imprime?
-    a) Holamundo
-    b) Hola mundo
-    c) Error porque no puede unir cadenas con espacios sin comas
-    d) Solo "Hola"
+    a) Hola mundo
+    b) Error porque no puede unir cadenas con espacios sin comas
+    c) Solo "Hola"
+    d) Holamundo
 
-
-30.  
-    x = 5.5
-    print(int(x)) # Conversión a entero
-
-    ¿Qué se imprime?
-    a) 5
-    b) 6
-    c) Error porque int() no puede convertir flotantes
-    d) El texto "5.5"
-
-
----
-
-**PREGUNTAS DE TEMAS 0, 1 Y 2 (Bucles 'for' con indexación)**
-
-31.  
+14.
     lista = ["A", "B", "C"]
     for i in range(len(lista)):
         print(f"{i}: {lista[i]}")
@@ -347,183 +156,109 @@
     ¿Qué se imprime?
     a) 0: A\n1: B\n2: C
     b) A\nB\nC
-    c) Error porque no se puede usar 'range' con listas directamente
-    d) "A"
+    c) Solo "A"
+    d) Error porque no se puede usar 'range' con listas directamente
 
-
-32.  
-    for i in range(3):
-        print(i + 10)
-
-    ¿Qué se imprime?
-    a) 10 11 12
-    b) 3 4 5
-    c) 0 1 2
-    d) Error porque 'i' no está definido correctamente
-
-
-33.  
+15.
     x = "python"
     print(x[0].upper())
 
     ¿Qué se imprime?
-    a) p
+    a) Error porque no puede acceder a la primera letra con '0'
     b) P
-    c) Python
-    d) Error porque no puede acceder a la primera letra con '0'
+    c) p
+    d) Python
 
-
-34.  
-    edad = 25
-    print(edad >= 18 and edad <= 30)
-
-    ¿Qué se imprime?
-    a) True
-    b) False
-    c) 25
-    d) Error porque no puede comparar con dos condiciones a la vez
-
-
-35.  
-    for i in range(0, 5):
-        print(i * 2) # Multiplicación de cada número por 2
-
-    ¿Qué se imprime?
-    a) 0 2 4 6 8
-    b) 1 3 5 7 9
-    c) 2 4 6 8 10
-    d) Error porque el bucle no puede multiplicar directamente con un número fijo
-
-
----
-
-**PREGUNTAS DE TEMAS 0, 1 Y 2 (Errores comunes)**
-
-36.  
-    x = "hola"
-    print(x * 2)
-
-    ¿Qué se imprime?
-    a) holahola
-    b) Error porque no se puede multiplicar strings por enteros
-    c) HolaHola (con mayúsculas)
-    d) hola
-
-
-37.  
+16.
     lista = [1, 2, 3]
-    print(lista[0] + lista[3]) # Acceso a índice fuera de rango
+    print(lista[0] + lista[3])
+
+    ¿Qué ocurre?
+    a) Error: IndexError, el índice 3 no existe (los válidos son 0, 1 y 2)
+    b) Se imprime 4
+    c) Se imprime 3
+    d) Se imprime el texto "lista[0] + lista[3]"
+
+17.
+    print(2**3**2)
 
     ¿Qué se imprime?
-    a) 4
-    b) Error porque el índice 3 no existe en una lista de tamaño 3
-    c) 3
-    d) Solo "lista[0] + lista[3]" como texto
+    a) 512
+    b) 36
+    c) 8
+    d) 64
 
+18.
+    print(-3 // 2)
 
-38.  
-    x = True
-    print(x == True) # Comparación booleana directa
+    ¿Qué se imprime?
+    a) -2
+    b) -1
+    c) -1.5
+    d) 1
+
+19.
+    print(type(3 / 1))
+
+    ¿Qué se imprime?
+    a) <class 'float'>
+    b) <class 'str'>
+    c) <class 'int'>
+    d) 1
+
+20.
+    print(1 + 2 * 3 ** 2)
+
+    ¿Qué se imprime?
+    a) 28
+    b) 19
+    c) 63
+    d) Error
+
+21.
+    x = 5
+    x += 3
+    x *= 2
+    print(x)
+
+    ¿Qué se imprime?
+    a) 13
+    b) 16
+    c) 8
+    d) 11
+
+22.
+    print(int(-2.9))
+
+    ¿Qué se imprime?
+    a) -2
+    b) 2
+    c) -3
+    d) -2.9
+
+23.
+    print(ord("a"), chr(98))
+
+    ¿Qué se imprime?
+    a) 97 b
+    b) a 98
+    c) a b
+    d) 97 98
+
+24.
+    print("{0}x{0}={1}".format(3, 9))
+
+    ¿Qué se imprime?
+    a) 3x9=3
+    b) 3x3=9
+    c) Error
+    d) 0x0=1
+
+25.
+    print(not (True and False) or False)
 
     ¿Qué se imprime?
     a) True
     b) False
-    c) Error porque no se puede comparar booleanos con '='
-    d) El texto "True" en mayúsculas
-
-
-39.  
-    x = 10
-    print(x // x) # División entera de un número por sí mismo
-
-    ¿Qué se imprime?
-    a) 1.0
-    b) 1
-    c) Error porque no se puede dividir por cero
-    d) El texto "1"
-
-
-40.  
-    for i in range(5):
-        print(i + i) # Suma de cada número consigo mismo en el bucle
-
-    ¿Qué se imprime?
-    a) 2 4 6 8 10
-    b) 0 2 4 6 8
-    c) 1 3 5 7 9
-    d) Error porque no hay operador '+' en bucles
-
-
-# =====================================================================
-# PREGUNTAS DE TEMAS 1.1 Y 1.2: FUNDAMENTOS Y LENGUAJES DE PROGRAMACIÓN
-# =====================================================================
-
-41.
-    ¿Cuál es el valor en base decimal del número binario 101101₂?
-    a) 45
-    b) 53
-    c) 43
-    d) 37
-
-42.
-    En una representación en complemento a 2 con 8 bits, ¿cuál es el rango de enteros que se pueden representar?
-    a) De 0 a 255
-    b) De -128 a 127
-    c) De -127 a 128
-    d) De -256 a 255
-
-43.
-    ¿Cuál es el equivalente hexadecimal del número binario 11011010₂?
-    a) DA
-    b) D9
-    c) CA
-    d) E2
-
-44.
-    Según el estándar IEEE 754 para números en coma flotante (simple precisión de 32 bits), ¿cuáles son los 3 campos en los que se divide la palabra de memoria?
-    a) Signo, parte entera y parte decimal
-    b) Signo, exponente sesgado y mantisa (fracción)
-    c) Base, exponente y multiplicador
-    d) Signo, magnitud y paridad
-
-45.
-    En el modelo de arquitectura de Von Neumann, ¿cuáles son los componentes principales de la CPU (Unidad Central de Proceso)?
-    a) Memoria RAM y Disco Duro
-    b) Unidad de Control (UC), Unidad Aritmético-Lógica (ALU) y Registros
-    c) Tarjeta gráfica, bus de datos y BIOS
-    d) Sistema Operativo y Compilador
-
-46.
-    ¿Cuál de las siguientes afirmaciones describe mejor a Python respecto a su tipado y ejecución?
-    a) Es un lenguaje compilado a código máquina nativo y de tipado estático
-    b) Es un lenguaje interpretado (compilado a bytecode y ejecutado por la PVM), de tipado dinámico y fuertemente tipado
-    c) Es un lenguaje de tipado débil que permite sumar strings y enteros directamente sin conversión
-    d) Es un lenguaje puramente declarativo sin soporte estructurado
-
-47.
-    ¿Qué elemento del computador se encarga de sincronizar las operaciones y emitir las microórdenes que ejecutan las instrucciones de un programa?
-    a) La memoria caché
-    b) La Unidad de Control (UC)
-    c) La Unidad Aritmético Lógica (ALU)
-    d) El bus de direcciones
-
-48.
-    En la jerarquía de memoria de un computador, ¿cuál es el nivel que ofrece la MENOR latencia (acceso más rápido) pero la MENOR capacidad y mayor coste por bit?
-    a) Memoria secundaria (SSD/HDD)
-    b) Memoria principal (RAM)
-    c) Memoria Caché L3
-    d) Registros internos de la CPU
-
-49.
-    ¿Cuál de los siguientes identificadores es INVÁLIDO en Python por ser una palabra reservada (keyword)?
-    a) numero_1
-    b) _temperatura
-    c) while
-    d) total_euros
-
-50.
-    ¿Qué ocurre en Python cuando se ejecuta un archivo de código fuente (.py)?
-    a) Se compila directamente a binario ejecutable .exe dependiente del hardware
-    b) El compilador de Python traduce el código fuente a bytecode intermedio (.pyc) y la máquina virtual (Python Virtual Machine) lo interpreta instrucción a instrucción
-    c) La CPU ejecuta directamente el texto en inglés sin traducción previa
-    d) Se envía a un servidor web para su ejecución remota
+    c) None
+    d) Error

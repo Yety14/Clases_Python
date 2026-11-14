@@ -1,0 +1,253 @@
+# ======================================================================
+# PREGUNTAS TEMA 5: TIPOS ESTRUCTURADOS (cadenas, listas, tuplas, conjuntos, diccionarios)
+# ======================================================================
+# OJO: no hay apuntes del Tema 5; preguntas hechas con el temario del Tema 0 y conocimiento general de Python.
+
+
+1.
+    s = "Python"
+    print(s[1:4])
+
+    ¿Qué se imprime?
+    a) yth
+    b) yt
+    c) Pyt
+    d) ytho
+
+2.
+    s = "Python"
+    print(s[::-1])
+
+    ¿Qué se imprime?
+    a) Pytho
+    b) Error
+    c) Python
+    d) nohtyP
+
+3.
+    s = "Python"
+    print(s[-3:])
+
+    ¿Qué se imprime?
+    a) Pyt
+    b) tho
+    c) on
+    d) hon
+
+4.
+    s = "hola"
+    s[0] = "H"
+
+    ¿Qué ocurre al ejecutar este código?
+    a) Se imprime None
+    b) TypeError: las cadenas son inmutables
+    c) s pasa a valer "Hola"
+    d) s pasa a valer "Hhola"
+
+5.
+    print("a,b,c".split(","))
+
+    ¿Qué se imprime?
+    a) a b c
+    b) ['a', 'b', 'c']
+    c) ('a', 'b', 'c')
+    d) abc
+
+6.
+    print("-".join(["a", "b", "c"]))
+
+    ¿Qué se imprime?
+    a) a - b - c
+    b) ['a', 'b', 'c']
+    c) a-b-c
+    d) abc
+
+7.
+    print("Hola".replace("o", "0"))
+
+    ¿Qué se imprime?
+    a) H0l0
+    b) H0la
+    c) Hola
+    d) Error
+
+8.
+    print("banana".count("an"), "banana".find("n"))
+
+    ¿Qué se imprime?
+    a) 3 2
+    b) 2 1
+    c) 2 2
+    d) 1 2
+
+9.
+    l = [1, 2, 3]
+    l.append(4)
+    print(l)
+
+    ¿Qué se imprime?
+    a) [1, 2, 3, 4]
+    b) None
+    c) [1, 2, 3]
+    d) [4, 1, 2, 3]
+
+10.
+    l = [1, 2, 3]
+    l.insert(1, 10)
+    print(l)
+
+    ¿Qué se imprime?
+    a) [1, 2, 3, 10]
+    b) [1, 2, 10, 3]
+    c) [1, 10, 2, 3]
+    d) [10, 1, 2, 3]
+
+11.
+    l = [3, 1, 2]
+    print(sorted(l), l)
+
+    ¿Qué se imprime?
+    a) [1, 2, 3] [1, 2, 3]
+    b) [3, 1, 2] [1, 2, 3]
+    c) None [1, 2, 3]
+    d) [1, 2, 3] [3, 1, 2]
+
+12.
+    l = [1, 2, 3]
+    print(l.pop(), l)
+
+    ¿Qué se imprime?
+    a) 2 [1, 3]
+    b) 3 [1, 2, 3]
+    c) 3 [1, 2]
+    d) [1, 2] 3
+
+13.
+    a = [1, 2]
+    b = a
+    b.append(3)
+    print(a)
+
+    ¿Qué se imprime?
+    a) [1, 2]
+    b) Error
+    c) [1, 2, 3]
+    d) [3]
+
+14.
+    a = [1, 2]
+    b = a.copy()
+    b.append(3)
+    print(a)
+
+    ¿Qué se imprime?
+    a) Error
+    b) [1, 2]
+    c) [3]
+    d) [1, 2, 3]
+
+15.
+    print([1, 2] + [3], [0] * 3)
+
+    ¿Qué se imprime?
+    a) [1, 2, 3] [0]
+    b) [1, 2, 3] [0, 0, 0]
+    c) [6] [0]
+    d) Error
+
+16.
+    l = [1, 2, 3, 4, 5]
+    print(l[::2])
+
+    ¿Qué se imprime?
+    a) [5, 3, 1]
+    b) [1, 3, 5]
+    c) [2, 4]
+    d) [1, 2, 3]
+
+17.
+    print([x**2 for x in range(4)])
+
+    ¿Qué se imprime?
+    a) [0, 1, 2, 3]
+    b) [0, 1, 4, 9]
+    c) [0, 2, 4, 6]
+    d) [1, 4, 9, 16]
+
+18.
+    l = [1, 2, 3, 2]
+    l.remove(2)
+    print(l)
+
+    ¿Qué se imprime?
+    a) [1, 2, 3]
+    b) [1, 3, 2]
+    c) [1, 3]
+    d) [3, 2]
+
+19.
+    m = [[1, 2], [3, 4]]
+    print(m[1][0])
+
+    ¿Qué se imprime?
+    a) 4
+    b) 2
+    c) 3
+    d) 1
+
+20.
+    l = [1, 2, 3]
+    print(l[3])
+
+    ¿Qué ocurre al ejecutar este código?
+    a) IndexError: índice fuera de rango
+    b) Se imprime 0
+    c) Se imprime 3
+    d) Se imprime None
+
+21.
+    t = (1, 2, 3)
+    t[0] = 5
+
+    ¿Qué ocurre al ejecutar este código?
+    a) Se imprime None
+    b) t pasa a valer (5, 2, 3)
+    c) TypeError: las tuplas son inmutables
+    d) t pasa a valer [5, 2, 3]
+
+22.
+    print(type((1)), type((1,)))
+
+    ¿Qué se imprime?
+    a) <class 'tuple'> <class 'tuple'>
+    b) <class 'int'> <class 'tuple'>
+    c) <class 'int'> <class 'int'>
+    d) <class 'tuple'> <class 'int'>
+
+23.
+    print(len({1, 2, 2, 3}))
+
+    ¿Qué se imprime?
+    a) 2
+    b) Error
+    c) 4
+    d) 3
+
+24.
+    print({1, 2, 3} & {2, 3, 4})
+
+    ¿Qué se imprime?
+    a) {1}
+    b) {2, 3}
+    c) {1, 2, 3, 4}
+    d) {1, 4}
+
+25.
+    d = {"a": 1}
+    print(d["z"])
+
+    ¿Qué ocurre al ejecutar este código?
+    a) KeyError: la clave no existe
+    b) Se imprime 0
+    c) Se imprime None
+    d) Se añade la clave z
